@@ -18,19 +18,21 @@ html, body {
 .header {
   background: #f9f5f2;
   padding: 1em 0;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .header {
-    padding: 1em 0;
+    padding: 0.5em 0;
   }
+}
+.header {
+  text-align: center;
 }
 .header .logo {
   margin: 1em auto 2em;
 }
 @media (min-width: 768px) {
   .header .logo {
-    margin: 1em auto 3em;
+    margin: 1em auto 2em;
   }
 }
 .header .logo img {
@@ -121,7 +123,7 @@ html, body {
   }
 }
 .nav-link {
-  color: rgb(94, 68, 17);
+  color: rgb(102, 51, 0);
   background-color: rgb(230, 204, 153);
 }
 .nav-link:hover {
@@ -147,19 +149,20 @@ html, body {
   }
 }
 .decoration .title {
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8em;
-  letter-spacing: 2px;
+  /*letter-spacing: 2px;*/
   margin-bottom: 1.1em;
+  color: rgb(102, 51, 0);
 }
 .decoration .article {
   padding: 1em;
 }
 .decoration .article:hover {
   border-radius: 15px;
-  background: rgba(230, 204, 153, 0.25);
+  background: rgba(230, 204, 153, 0.4);
   cursor: pointer;
 }
 .decoration .article figure {
@@ -174,31 +177,31 @@ html, body {
 }
 
 .design {
-  margin: 2em 0;
+  padding: 2em 0;
   background: rgba(0, 0, 0, 0.025);
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 @media (min-width: 768px) {
   .design {
-    margin: 4em 0 2em 0;
-    padding: 3em 0;
+    padding: 4em 0;
   }
 }
 .design .title {
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8em;
-  letter-spacing: 2px;
+  /*letter-spacing: 2px;*/
   margin-bottom: 1.1em;
+  color: rgb(102, 51, 0);
 }
 .design .article {
   padding: 1em;
 }
 .design .article:hover {
   border-radius: 15px;
-  background: rgba(230, 204, 153, 0.25);
+  background: rgba(230, 204, 153, 0.4);
   cursor: pointer;
 }
 .design .article figure {
@@ -212,9 +215,63 @@ html, body {
   margin: 0;
 }
 
+.about {
+  padding: 2em 0;
+  background: #f9f5f2;
+}
+@media (min-width: 768px) {
+  .about {
+    padding: 4em 0 2em 0;
+  }
+}
+.about .title {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2em;
+  /*letter-spacing: 2px;*/
+  color: rgb(102, 51, 0);
+}
+.about .article {
+  /*&:hover {
+    border-radius: 15px;
+    background: rgba($color-primary, .4);
+    cursor: pointer;
+  }*/
+}
+.about .article figure {
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.logos {
+  padding: 1.5em 0;
+  background: rgb(102, 51, 0);
+}
+@media (min-width: 768px) {
+  .logos {
+    padding: 3em 0;
+  }
+}
+
+.video {
+  padding: 1.5em 0;
+}
+@media (min-width: 768px) {
+  .video {
+    padding: 4em 0;
+  }
+}
+.video .youtube {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
 .footer {
   text-align: center;
-  padding: 1em 0;
+  padding: 3em 0 1.5em 0;
+}
+.footer strong {
+  color: rgb(102, 51, 0);
 }
 .footer p {
   margin: 1.5em 0 0 0;
@@ -224,9 +281,13 @@ html, body {
   height: auto;
 }
 
-main img {
+main .decoration img,
+main .design img {
   cursor: pointer;
 }
-main img:hover {
-  transform: scale(1.1);
-}/*# sourceMappingURL=main.css.map */
+main .decoration img:hover,
+main .design img:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=main.css.map */
