@@ -16,12 +16,13 @@ html, body {
 }
 
 .header {
+  background: #f9f5f2;
   padding: 1em 0;
   text-align: center;
 }
 @media (min-width: 768px) {
   .header {
-    padding: 2em 0;
+    padding: 1em 0;
   }
 }
 .header .logo {
@@ -29,7 +30,7 @@ html, body {
 }
 @media (min-width: 768px) {
   .header .logo {
-    margin: 1em auto 4em;
+    margin: 1em auto 3em;
   }
 }
 .header .logo img {
@@ -38,14 +39,14 @@ html, body {
 }
 @media (min-width: 768px) {
   .header .logo img {
-    width: 400px;
+    width: 300px;
   }
 }
 
 .nav {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .nav-list {
   flex-wrap: wrap;
@@ -66,7 +67,6 @@ html, body {
   text-transform: uppercase;
   position: relative;
   border-bottom: 1px solid #000;
-  /*&:last-child::after {*/
 }
 @media (min-width: 576px) {
   .nav-item {
@@ -75,7 +75,8 @@ html, body {
 }
 @media (min-width: 992px) {
   .nav-item {
-    width: 22%;
+    width: 15%;
+    border-bottom: none;
   }
 }
 .nav-item:last-child {
@@ -86,23 +87,38 @@ html, body {
     border-bottom: 1px solid #000;
   }
 }
+@media (min-width: 992px) {
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+}
 .nav-item::before {
   content: "";
   width: 1px;
-  height: 100px;
+  height: 70px;
   background-color: #000;
   position: absolute;
-  bottom: -40px;
+  bottom: -20px;
   left: 0;
+}
+@media (min-width: 992px) {
+  .nav-item:last-child::after {
+    display: block;
+  }
 }
 .nav-item::after {
   content: "";
   width: 1px;
-  height: 100px;
+  height: 70px;
   background-color: #000;
   position: absolute;
-  bottom: -40px;
+  bottom: -20px;
   right: 0;
+}
+@media (min-width: 992px) {
+  .nav-item::after {
+    display: none;
+  }
 }
 .nav-link {
   color: rgb(94, 68, 17);
@@ -113,9 +129,13 @@ html, body {
   background-color: #000;
 }
 
+.hero {
+  background: #f9f5f2;
+  padding: 0 0 2em 0;
+}
 .hero figure {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .decoration {
@@ -127,18 +147,24 @@ html, body {
   }
 }
 .decoration .title {
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   letter-spacing: 2px;
+  margin-bottom: 1.1em;
 }
 .decoration .article {
-  padding: 1em 0;
+  padding: 1em;
+}
+.decoration .article:hover {
+  border-radius: 15px;
+  background: rgba(230, 204, 153, 0.25);
+  cursor: pointer;
 }
 .decoration .article figure {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 .decoration .article-title {
   font-weight: 200;
@@ -149,25 +175,35 @@ html, body {
 
 .design {
   margin: 2em 0;
+  background: rgba(0, 0, 0, 0.025);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 @media (min-width: 768px) {
   .design {
-    margin: 4em 0;
+    margin: 4em 0 2em 0;
+    padding: 3em 0;
   }
 }
 .design .title {
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   letter-spacing: 2px;
+  margin-bottom: 1.1em;
 }
 .design .article {
-  padding: 1em 0;
+  padding: 1em;
+}
+.design .article:hover {
+  border-radius: 15px;
+  background: rgba(230, 204, 153, 0.25);
+  cursor: pointer;
 }
 .design .article figure {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 .design .article-title {
   font-weight: 200;
@@ -177,12 +213,20 @@ html, body {
 }
 
 .footer {
-  height: 50px;
+  text-align: center;
+  padding: 1em 0;
+}
+.footer p {
+  margin: 1.5em 0 0 0;
+}
+.footer img {
+  width: 250px;
+  height: auto;
 }
 
 main img {
   cursor: pointer;
 }
 main img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */
