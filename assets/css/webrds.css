@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   transition: all ease 0.1s;
 }
@@ -15,15 +16,41 @@ html, body {
   height: 100%;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Empieza 50px arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición normal */
+  }
+}
 .header {
   background: #f9f5f2;
   padding: 0;
+  position: sticky;
   text-align: center;
 }
 @media (min-width: 768px) {
   .header {
     padding: 0.5em 0;
   }
+}
+.header-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  animation: fadeInDown 0.2s ease-out forwards;
+  padding: 0;
+}
+.header-fixed .logo {
+  margin: 0;
+}
+.header-fixed .logo img {
+  width: 200px !important;
+  animation: fadeInDown 0.2s ease-out forwards;
 }
 .header .logo {
   margin: 1em auto 2em;
