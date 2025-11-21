@@ -22,7 +22,7 @@ html, body {
 }
 .header {
   background: $color-bg;
-  padding: 1em 0;
+  padding: 0;
   @media (min-width: 768px){
     padding: .5em 0;
   }
@@ -33,7 +33,7 @@ html, body {
       margin: 1em auto 2em;
     }
     img {
-      width: 250px;
+      width: 150px;
       height: auto;
       @media (min-width: 768px){
         width: 300px;
@@ -58,12 +58,12 @@ html, body {
   }
   &-item {
     list-style: none;
-    width: 80%;
+    width: 50%;
     text-transform: uppercase;
     position: relative;
     border-bottom: 1px solid $color-black;
     @media (min-width: 576px){
-      width: 50%;
+      
     }
     @media (min-width: 992px){
       width: 15%;
@@ -123,7 +123,7 @@ html, body {
   }
 }
 .decoration {
-  margin: 2em 0;
+  margin: 1em 0;
   @media (min-width: 768px){
     margin: 4em 0;
   }
@@ -131,10 +131,14 @@ html, body {
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.3em;
     /*letter-spacing: 2px;*/
-    margin-bottom: 1.1em;
+    margin-bottom: 0;
     color: $color-secondary;
+    @media (min-width: 768px){
+      margin-bottom: 1.1em;
+      font-size: 1.8em;
+    }
   }
   .article {
     padding: 1em;
@@ -167,10 +171,14 @@ html, body {
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.3em;
     /*letter-spacing: 2px;*/
-    margin-bottom: 1.1em;
+    margin-bottom: 0;
     color: $color-secondary;
+    @media (min-width: 768px){
+      margin-bottom: 1.1em;
+      font-size: 1.8em;
+    }
   }
   .article {
     padding: 1em;
@@ -235,18 +243,30 @@ html, body {
 }
 .footer {
   text-align: center;
-  padding: 3em 0 1.5em 0;
+  padding: 3em 1em 1.5em 1em;
   strong {
     color: $color-secondary;
   }
   p {
-    margin: 1.5em 0 0 0;
+    margin:0;
   }
-  img {
-    width: 250px;
-    height: auto;
+  p:nth-of-type(2) {
+    opacity: .5;
+    margin: 0 0 1em 0;
 
   }
+  p:nth-of-type(3) {
+    font-size: .8em;
+    
+  }
+  img {
+      width: 150px;
+      height: auto;
+      margin: 0 0 1em 0;
+      @media (min-width: 768px){
+        width: 250px;
+      }
+    }
 }
 
 main {
