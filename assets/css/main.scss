@@ -34,12 +34,15 @@ html, body {
 .header {
   background: $color-bg;
   padding: 0;
-  position: sticky;
+  position: fixed;
   text-align: center;
+  width: 100%;
+  z-index:22;
+  top: 0;
   @media (min-width: 768px){
     padding: .5em 0;
   }
-  &-fixed {
+  /*&-fixed {
       position: fixed;
       width: 100%;
       top: 0;
@@ -55,7 +58,7 @@ html, body {
         }
       }
 
-  }
+  }*/
   .logo {
     margin: 1em auto 2em;
     @media (min-width: 768px){
@@ -142,6 +145,10 @@ html, body {
       background-color: $color-black;
     }
   }
+}
+main {
+
+  padding-top: 209px;
 }
 .hero {
   background: $color-bg;
@@ -309,4 +316,83 @@ main {
     }
 
   }
+}
+
+.breadcrumb {
+  background: $color-secondary;
+  color: $color-primary;
+  padding: 1em 0;
+  margin: 0 0 3em 0;
+}
+.button {
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: $color-secondary;
+  padding: .5em 1.3em;
+  display: inline-block;
+  margin: 1em 0;
+  border: 0;
+  &__primary {
+    background-color: $color-primary;
+    color: $color-secondary;
+  }
+}
+.page {
+  .title {
+    margin: 0 auto;
+    font-weight: 200;
+  }
+  .subtitle {
+    color: $color-secondary;
+    font-size: 3em;
+    margin: 0 0 .5em 0;
+  }
+  .description {
+    padding: 0 1.5em;
+  }
+  .images {
+    border-top: 1px solid rgba($color-black, .3);
+    border-bottom: 1px solid rgba($color-black, .3);
+    padding: 3em 0;
+  }
+  .row + .row {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  &__press {
+    .article {
+      margin: 1.5em 0;
+    }
+    .author-date {
+      font-size: .9em;
+      opacity: .5;
+    }
+    h4 {
+      font-weight: 300;
+    }
+    .link {
+      color: $color-secondary;
+    }
+  }
+  .article__details {
+    margin: 0 0 2em 0;
+    padding: 0 0 2em 0;
+    figure {
+      margin: 2em 0;
+    }
+    h2 {
+      font-size: 2.5em;
+      margin: 0 0 1em; 
+    }
+    
+  }
+  .press__related {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-top: 1px solid rgba($color-black, .3);
+    border-bottom: 1px solid rgba($color-black, .3);
+  }
+  
 }
